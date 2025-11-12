@@ -39,9 +39,7 @@ jobs:
           command: |
             cd www;
             cd ${{ secrets.PROJECT_FOLDER }};
-#            git checkout master;
             git pull;
             echo 'end pull';
-
       - name: Notify Command Success
         run: echo "Command executed on ${{ secrets.HOST }} successfully!"
