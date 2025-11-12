@@ -28,6 +28,10 @@ jobs:
 #        with:
           # Upload entire repository
 #          path: 'build'
+      - name: Add SSH known hosts
+        run: |
+          mkdir -p ~/.ssh
+          ssh-keyscan -H <your_server_ip_or_hostname> >> ~/.ssh/known_hosts
       - name: Run remote command via SSH
         uses: D3rHase/ssh-command-action@v0.2.2
         with:
