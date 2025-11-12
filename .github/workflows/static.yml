@@ -16,6 +16,7 @@ jobs:
         uses: D3rHase/ssh-command-action@latest
         with:
           host: ${{ secrets.HOST }}
+          user: ${{ secrets.USER }}
           private_key: ${{ secrets.PRIVATE_KEY }}
           host_fingerprint: ${{ secrets.HOST_FINGERPRINT }}
           command: |
