@@ -23,5 +23,3 @@ jobs:
             cd ${{ secrets.PROJECT_FOLDER }};
             git pull;
             echo 'end pull';
-      - name: Notify Command Success
-        run: echo "Command executed on ${{ secrets.HOST }} successfully!"
