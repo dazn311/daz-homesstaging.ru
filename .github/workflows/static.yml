@@ -18,6 +18,7 @@ jobs:
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USER }}
+          password: ${{ secrets.PASSWORD }} # Or use ssh_key and passphrase
           private_key: ${{ secrets.PRIVATE_KEY }}
           source: "build" # Local files/directories to transfer (comma-separated)
           target: "www/dazn311.homesstaging.online/" # Target directory on the remote server
