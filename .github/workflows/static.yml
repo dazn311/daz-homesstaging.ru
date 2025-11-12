@@ -18,7 +18,6 @@ jobs:
           host: ${{ secrets.HOST }}
           user: ${{ secrets.USER }}
           private_key: ${{ secrets.PRIVATE_KEY }}
-          host_fingerprint: ${{ secrets.HOST_FINGERPRINT }}
           command: |
             cd www;
             cd ${{ secrets.PROJECT_FOLDER }};
