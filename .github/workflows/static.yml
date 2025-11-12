@@ -31,6 +31,7 @@ jobs:
       - name: Run remote command via SSH
         uses: D3rHase/ssh-command-action@v0.2.2
         with:
+          path: build;
           host: ${{ secrets.HOST }}
           port: ${{ secrets.PORT }}
           user: ${{ secrets.USER }}
