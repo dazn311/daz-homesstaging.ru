@@ -1,2 +1,3 @@
 git push -u origin master
-rename9 deploy to static.yml;
+rename10 deploy to static.yml;
+ssh-keygen -R github.com
