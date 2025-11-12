@@ -1,42 +1,21 @@
-# Simple workflow for deploying static content to GitHub Pages
 name: Deploy static content to Pages
 
 on:
-  # Runs on pushes targeting the default branch
   push:
-    branches: ["master"]
-
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
+    branches:
+      - master
 
 jobs:
-  # Single deploy job since we're just deploying
   deploy:
     runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/master'
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
-#        with:
-          # Upload entire repository
-#          path: 'build'
-      - name: Add SSH known hosts
-        run: |
-          mkdir -p ~/.ssh
-          ssh-keyscan -H ${{ secrets.HOST }} ~/.ssh/known_hosts
+        uses: actions/checkout@v3
       - name: Run remote command via SSH
-        uses: D3rHase/ssh-command-action@v0.2.2
+        uses: D3rHase/ssh-command-action@latest
         with:
           host: ${{ secrets.HOST }}
-          port: ${{ secrets.PORT }}
           user: ${{ secrets.USER }}
           private_key: ${{ secrets.PRIVATE_KEY }}
           command: |
