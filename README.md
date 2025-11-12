@@ -1,2 +1,2 @@
 git push -u origin master
-rename3 deploy to static.yml;
+rename4 deploy to static.yml;
