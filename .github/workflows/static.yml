@@ -10,16 +10,15 @@ jobs:
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/master'
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-      - name: Run remote command via SSH
-        uses: D3rHase/ssh-command-action@latest
+      - name: Checkout code
+        uses: actions/checkout@v4 # Action to check out your repository's code
+
+      - name: Copy files via SCP
+        uses: appleboy/scp-action@v1 # Use the SCP action
         with:
           host: ${{ secrets.HOST }}
-          user: ${{ secrets.USER }}
+          username: ${{ secrets.USER }}
           private_key: ${{ secrets.PRIVATE_KEY }}
-          command: |
-            cd www;
-            cd ${{ secrets.PROJECT_FOLDER }};
-            git pull;
-            echo 'end pull';
+          source: "build" # Local files/directories to transfer (comma-separated)
+          target: "www/dazn311.homesstaging.online/" # Target directory on the remote server
+          # rm: true # Optional: Remove target directory before upload (use with caution)
