@@ -30,7 +30,6 @@ jobs:
       - name: log dir
         run: |
           pwd
-          ls -a
       - name: Run a multi-line script
         run: |
 #          mkdir build3
