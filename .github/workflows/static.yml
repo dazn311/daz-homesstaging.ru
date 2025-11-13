@@ -12,7 +12,11 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4 # Action to check out your repository's code
-
+      # Runs a set of commands using the runners shell
+      - name: Run a multi-line script
+        run: |
+          mkdir build
+          cp -TR build build
       - name: Copy files via SCP
         uses: appleboy/scp-action@v1 # Use the SCP action
         with:
