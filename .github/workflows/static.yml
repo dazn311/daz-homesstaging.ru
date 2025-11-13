@@ -21,18 +21,16 @@ jobs:
       - name: Starting Node.js ${{matrix.node-version}}
         uses: actions/setup-node@v6
         with:
-          node-version: ${{matrix.node-version}}
+          node-version: '22'
       # Runs a set of commands using the runners shell
       - name: Install modules
         run: npm install
       - name: Build project
         run: npm run build
       - name: log dir
-        run: |
-          pwd
+        run: pwd
       - name: Run a multi-line script
         run: |
-#          mkdir build3
           cp -TR build .
           cp index.html index.php
       - name: Copy files via SCP
