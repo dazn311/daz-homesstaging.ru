@@ -7,10 +7,8 @@
 
 # testing
 /coverage
-
 # production
-/build2
-
+/bui2ld
 # misc
 .DS_Store
 .env.local
