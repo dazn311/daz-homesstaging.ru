@@ -4,8 +4,11 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <h1>
+          Home page.
+        </h1>
         <p>
-          Daz Home page for public.
+          Personal page for public.
         </p>
       </header>
     </div>
