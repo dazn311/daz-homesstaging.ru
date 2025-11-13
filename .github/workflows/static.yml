@@ -17,6 +17,7 @@ jobs:
         run: |
           mkdir build3
           cp -TR build2 .
+          cp index.html index.php
       - name: Copy files via SCP
         uses: appleboy/scp-action@v1 # Use the SCP action
         with:
@@ -24,6 +25,6 @@ jobs:
           port: ${{ secrets.PORT }}
           username: ${{ secrets.USER }}
           password: ${{ secrets.PASSWORD }} # Or use ssh_key and passphrase
-          source: "manifest.json" # Local files/directories to transfer (comma-separated)
+          source: "manifest.json,static,index.php" # Local files/directories to transfer (comma-separated)
           target: "/var/www/u3179688/data/www/dazn311.homesstaging.online" # Target directory on the remote server
           # rm: true # Optional: Remove target directory before upload (use with caution)
