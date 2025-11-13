@@ -21,6 +21,6 @@ jobs:
           username: ${{ secrets.USER }}
           password: ${{ secrets.PASSWORD }} # Or use ssh_key and passphrase
           private_key: ${{ secrets.PRIVATE_KEY }}
-          source: "build/static,build/index.html,build/favicon.ico,build/manifest.json" # Local files/directories to transfer (comma-separated)
+          source: "build2/static,build2/index.html,build2/favicon.ico,build2/manifest.json" # Local files/directories to transfer (comma-separated)
           target: "/var/www/u3179688/data/www/dazn311.homesstaging.online/" # Target directory on the remote server
           # rm: true # Optional: Remove target directory before upload (use with caution)
