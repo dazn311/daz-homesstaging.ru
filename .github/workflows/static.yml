@@ -4,19 +4,33 @@ on:
   push:
     branches:
       - master
+  pull_request:
+    branches:
+      - master
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/master'
+    strategy:
+      matrix:
+       node-version: [22.16.0]
     steps:
       - name: Checkout code
         uses: actions/checkout@v4 # Action to check out your repository's code
+      - name: Starting Node.js ${{matrix.node-version}}
+        uses: actions/setup-node@v6
+        with:
+          node-version: ${{matrix.node-version}}
       # Runs a set of commands using the runners shell
+      - name: Install modules
+        run: npm install
+      - name: Build project
+        run: npm run build
       - name: Run a multi-line script
         run: |
-          mkdir build3
-          cp -TR build2 .
+#          mkdir build3
+          cp -TR build .
           cp index.html index.php
       - name: Copy files via SCP
         uses: appleboy/scp-action@v1 # Use the SCP action

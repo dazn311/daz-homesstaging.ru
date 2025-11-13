@@ -7,10 +7,10 @@ function App() {
         <h1>
           Home page.
         </h1>
-        <p>
-          Personal page for public.
-        </p>
       </header>
+      <p>
+        Personal page for React JS.
+      </p>
     </div>
   );
 }
