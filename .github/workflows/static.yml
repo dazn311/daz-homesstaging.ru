@@ -27,6 +27,10 @@ jobs:
         run: npm install
       - name: Build project
         run: npm run build
+      - name: log dir
+        run: |
+          pwd
+          ls -a
       - name: Run a multi-line script
         run: |
 #          mkdir build3

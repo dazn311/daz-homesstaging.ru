@@ -1,5 +1,5 @@
 git push -u origin master
-rename32 deploy to static.yml;
+rename33 deploy to static.yml;
 ssh-keygen -R github.com
 
 cd www/dazn311.homesstaging.online/daz-homesstaging.ru/build
