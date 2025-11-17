@@ -1,21 +1,13 @@
-import './App.css';
+import React from "react";
+import "./App.scss";
+import Main from "./containers/Main";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>
-          Home page.
-        </h1>
-      </header>
-      <p>
-        Personal page for React JS.
-      </p>
+    <div>
+      <Main />
     </div>
   );
 }
 
 export default App;
-
-// import logo from './logo.svg';
-//<img src={logo} className="App-logo" alt="logo" />
