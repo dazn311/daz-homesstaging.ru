@@ -372,7 +372,7 @@ const contactInfo = {
   subtitle:
     "Discuss a project or just want to say hi? My Inbox is open for all.",
   number: "+7 985 007-77-50",
-  email_address: "react-daz@gmail.com"
+  email_address: "react.dazn311@gmail.com"
 };
 
 // Twitter Section
