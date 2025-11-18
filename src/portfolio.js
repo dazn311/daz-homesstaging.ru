@@ -34,12 +34,12 @@ const greeting = {
 
 const socialMediaLinks = {
   github: "https://github.com/dazn311",
-  linkedin: "https://www.linkedin.com/in/dazn311/",
-  gmail: "dazn311@gmail.com",
+  linkedin: "https://www.linkedin.com/in/react.dazn311/",
+  gmail: "react.dazn311@gmail.com",
   gitlab: "https://gitlab.com/dazn311",
-  facebook: "https://www.facebook.com/dazn311",
-  medium: "https://medium.com/@dazn311",
-  stackoverflow: "https://stackoverflow.com/users/dazn311",
+  facebook: "https://www.facebook.com/react.dazn311",
+  medium: "https://medium.com/@react.dazn311",
+  stackoverflow: "https://stackoverflow.com/users/react.dazn311",
   // Instagram, Twitter and Kaggle are also supported in the links!
   // To customize icons and social links, tweak src/components/SocialMedia
   display: true // Set true to display this section, defaults to false
