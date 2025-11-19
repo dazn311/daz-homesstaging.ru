@@ -2,6 +2,7 @@ import React, {useContext} from "react";
 import "./Skills.scss";
 import SoftwareSkill from "../../components/softwareSkills/SoftwareSkill";
 import {illustration, skillsSection} from "../../portfolio";
+import {ReactComponent as DeveloperActivitySvg} from "../../assets/images/developerActivity.svg";
 
 import codingPerson from "../../assets/lottie/codingPerson";
 import DisplayLottie from "../../components/displayLottie/DisplayLottie";
@@ -19,10 +20,7 @@ export default function Skills() {
           {illustration.animated ? (
             <DisplayLottie animationData={codingPerson} />
           ) : (
-            <img
-              alt="Man Working"
-              src={require("../../assets/images/developerActivity.svg")}
-            ></img>
+            <DeveloperActivitySvg/>
           )}
         </div>
         <div className="skills-text-div">

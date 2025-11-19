@@ -6,6 +6,7 @@ import SocialMedia from "../../components/socialMedia/SocialMedia";
 import Button from "../../components/button/Button";
 import {illustration, greeting} from "../../portfolio";
 import StyleContext from "../../contexts/StyleContext";
+import {ReactComponent as ManOnTable} from "../../assets/images/manOnTable.svg";
 import "./Greeting.scss";
 
 export default function Greeting() {
@@ -54,10 +55,7 @@ export default function Greeting() {
           {illustration.animated ? (
             <DisplayLottie animationData={landingPerson} />
           ) : (
-            <img
-              alt="man sitting on table"
-              src={require("../../assets/images/manOnTable.svg")}
-            ></img>
+            <ManOnTable/>
           )}
         </div>
       </div>

@@ -3,6 +3,7 @@ import "./Contact.scss";
 import SocialMedia from "../../components/socialMedia/SocialMedia";
 import {illustration, contactInfo} from "../../portfolio";
 import email from "../../assets/lottie/email";
+import {ReactComponent as ContactMailDark} from "../../assets/images/contactMailDark.svg";
 import DisplayLottie from "../../components/displayLottie/DisplayLottie";
 import StyleContext from "../../contexts/StyleContext";
 
@@ -54,10 +55,7 @@ export default function Contact() {
           {illustration.animated ? (
             <DisplayLottie animationData={email} />
           ) : (
-            <img
-              alt="Man working"
-              src={require("../../assets/images/contactMailDark.svg")}
-            ></img>
+            <ContactMailDark />
           )}
         </div>
       </div>

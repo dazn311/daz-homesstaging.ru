@@ -20,7 +20,7 @@ const illustration = {
 };
 
 const greeting = {
-  username: "Alexandr RG",
+  username: "React JS",
   title: "Hi all, I'm Alexandr",
   subTitle: emoji(
     "A passionate Full Stack Software Developer 🚀 having an experience of building Web and Mobile applications with JavaScript / Reactjs / Nodejs / React Native / SWIFTUI and some other cool libraries and frameworks."
@@ -37,7 +37,7 @@ const socialMediaLinks = {
   linkedin: "https://www.linkedin.com/in/react.dazn311/",
   gmail: "react.dazn311@gmail.com",
   gitlab: "https://gitlab.com/dazn311",
-  facebook: "https://www.facebook.com/react.dazn311",
+  // facebook: "https://www.facebook.com/react.dazn311",
   medium: "https://medium.com/@react.dazn311",
   stackoverflow: "https://stackoverflow.com/users/react.dazn311",
   // Instagram, Twitter and Kaggle are also supported in the links!
