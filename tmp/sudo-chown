@@ -1,0 +1,2 @@
+sudo chown -R dazn311 '/Volumes/arh-hdd/Project mbp 13 2020/tree-select-master'
+sudo chmod -R 755 '/Volumes/arh-hdd/Project mbp 13 2020/tree-select-master'

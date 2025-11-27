@@ -15,9 +15,11 @@
   margin-bottom: 30px;
 }
 
-.skills-image-div > img {
+.skills-image-div {
+  img,svg {
   max-width: 100%;
   height: auto;
+}
 }
 
 .skills-heading {
